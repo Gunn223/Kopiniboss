@@ -1,18 +1,18 @@
-window.onscroll = function() {scrollFunction()};
+// window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+// function scrollFunction() {
+// if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 
-document.getElementById("navbar").style.background = "rgba(0,0,0,0.3)";
-} else{
-    document.getElementById("navbar").style.background ="#ffff";
-}
-}
+// document.getElementById("navbar").style.background = "rgba(0,0,0,0.3)";
+// } else{
+//     document.getElementById("navbar").style.background ="#ffff";
+// }
+// }
 
 const produk = [
-    ["  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit totam voluptatum optio, maiores temporibus consequatur necessitatibus. Asperiores, rerum minus."],
+    ["Redvelvet ipsum dolor sit amet consectetur adipisicing elit. Sit velit totam voluptatum optio, maiores temporibus consequatur necessitatibus. Asperiores, rerum minus."],
     ["thaitea ipsum dolor sit amet consectetur adipisicing elit. Sit velit totam voluptatum optio, maiores temporibus consequatur necessitatibus. Asperiores, rerum minus."],
-    ["Strabery","  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit totam voluptatum optio, maiores temporibus consequatur necessitatibus. Asperiores, rerum minus."]];
+    ["Straberi Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit totam voluptatum optio, maiores temporibus consequatur necessitatibus. Asperiores, rerum minus."]];
 
     const thaitea   = document.getElementById('img-thaitea');
     const redvelvet = document.getElementById('img-redvelvet');
@@ -26,7 +26,7 @@ const produk = [
 
     thaitea.onclick = ubahtextthaitea;
     function ubahtextthaitea(){
-        imgmain.setAttribute('src','asset/image/thai-tea.png');
+    imgmain.setAttribute('src','asset/image/thai-tea.png');
     pourcoffe.innerHTML = produk[1],[0];
     h1ourcoffe.innerHTML = "Thai-Tea";
  }
@@ -34,24 +34,21 @@ const produk = [
     redvelvet.onclick = ubahtextredvelvet;
     function ubahtextredvelvet(){
     imgmain.setAttribute('src','asset/image/red-velvet-removebg-preview.png');
-  
     pourcoffe.innerHTML = produk[0],[0];
     h1ourcoffe.innerHTML = "Red-VelVet";
  }
-     straberi.onclick = ubahtextstraberi;
+    straberi.onclick = ubahtextstraberi;
     function ubahtextstraberi(){
     imgmain.setAttribute('src','asset/image/straberi-removebg-preview.png');
-    
     pourcoffe.innerHTML = produk[2],[0];
     h1ourcoffe.innerHTML = "Starberi";
  }
 
-//  mengatur responsive 
+//  mengatur responsive pada saat ukuran 576
 const lebarlayar = window.screen.availWidth;
 
-if(lebarlayar === 576){
-
+if(lebarlayar < 576){
     h1ourcoffe.classList.add('text-center');
-    overflo.setAttribute('class' ,'d-flex overflow-auto mt-3');
+    overflo.setAttribute('class' ,'d-flex overflow-auto mt-3 col-12');
     straberi.setAttribute('class','mx-3 border');
 }
