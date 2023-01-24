@@ -26,6 +26,7 @@ const produk = [
 
     thaitea.onclick = ubahtextthaitea;
     function ubahtextthaitea(){
+      imgmain.classList.add('img-fluid');
     imgmain.setAttribute('src','asset/image/thai-tea.png');
     pourcoffe.innerHTML = produk[1],[0];
     h1ourcoffe.innerHTML = "Thai-Tea";
@@ -44,11 +45,30 @@ const produk = [
     h1ourcoffe.innerHTML = "Starberi";
  }
 
-//  mengatur responsive pada saat ukuran 576
-const lebarlayar = window.screen.availWidth;
+   straberi.addEventListener('click',()=>{
+         straberi.classList.add('border-primary');
+         redvelvet.classList.remove('border-primary');
+         thaitea.classList.remove('border-primary');
+   })
+   
+   redvelvet.addEventListener('click',()=>{
+      straberi.classList.remove('border-primary');
+      redvelvet.classList.add('border-primary');
+      thaitea.classList.remove('border-primary');
+})
 
-if(lebarlayar < 576){
-    h1ourcoffe.classList.add('text-center');
-    overflo.setAttribute('class' ,'d-flex overflow-auto mt-3 col-12');
-    straberi.setAttribute('class','mx-3 border');
-}
+   thaitea.addEventListener('click',()=>{
+      straberi.classList.remove('border-primary');
+      thaitea.classList.add('border-primary');
+      redvelvet.classList.remove('border-primary');
+   })
+
+   //  mengatur responsive pada saat ukuran 576
+   const lebarlayar = window.screen.availWidth;
+
+   if(lebarlayar <= 576){
+      // imgmain.classList.add('justify-content-center');
+      h1ourcoffe.classList.add('text-center');
+      overflo.setAttribute('class' ,'d-flex overflow-auto mt-3 col-12');
+      straberi.setAttribute('class','mx-3 border');
+   }
